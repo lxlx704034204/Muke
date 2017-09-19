@@ -1,0 +1,18 @@
+<html ng-app='TestFormModule'>
+<head>
+    <meta charset="utf-8">
+    <script src="framework/angular-1.3.0.14/angular.js"></script>
+    <script src="js/FormBasic.js"></script>
+</head>
+<body>
+
+<form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
+    <!--required 需要数据-->
+    <input name="userName" type="text" ng-model="user.userName" required/>
+    <input name="password" type="password" ng-model="user.password" required/>
+    <!--$invalid 验证数据状态切换-->
+    <input type="submit" ng-disabled="myForm.$invalid"/>
+</form>
+
+</body>
+</html>

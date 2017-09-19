@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .wrap {
+            width:220px;
+            border:20px dashed #000;
+            padding:20px;
+            font-weight:bold;
+            color:#000;
+            background:#ccc url(logo_index.png) no-repeat;
+            /*设置元素背景图片的原始起始位置。*/
+            /*background-origin ： border-box | padding-box | content-box;*/
+            /*参数分别表示背景图片是从边框，还是内边距（默认值），或者是内容区域开始显示。*/
+            /*如果背景不是no-repeat，这个属性无效，它会从边框开始显示。*/
+            /*01.png*/
+            background-origin: border-box;
+            position: relative;
+        }
+        .wrap span {
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .content {
+            height:80px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap"><span>padding</span>
+    <div class="content">content</div>
+</div>
+</body>
+</html>

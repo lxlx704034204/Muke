@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes ganyihuan {
+            20% {
+                margin-left: 100px;
+                background:green;
+            }
+            40% {
+                margin-left:150px;
+                background:orange;
+            }
+            60% {
+                margin-left: 175px;
+                background: blue;
+            }
+            100% {
+                margin-left: 200px;
+                background: red;
+            }
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background:red;
+            color: #fff;
+        }
+        div:hover{
+            animation: ganyihuan 5s ease 1s;
+            /*通过animation-iteration-count属性让动画move只播放5次，代码设置为：*/
+            animation-iteration-count:5;
+            /*1、normal是默认值，如果设置为normal时，动画的每次循环都是向前播放；*/
+            /*2、另一个值是alternate，他的作用是，动画播放在第偶数次向前播放，第奇数次向反方向播放。*/
+            /*animation-direction属性主要用来设置动画播放方向，其语法规则如下：*/
+            animation-direction:alternate;
+            /*animation-play-state属性主要用来控制元素动画的播放状态。*/
+            /*其中running是其默认值，主要作用就是类似于音乐播放器一样，可以通过paused将正在播放的动画停下来，也可以通过running将暂停的动画重新播放，*/
+            /*例如，页面加载时，动画不播放。代码如下：*/
+            animation-play-state:paused;
+            /*animation-fill-mode属性定义在动画开始之前和结束之后发生的操作。*/
+            /*例如：让动画停在最一帧处。代码如下：*/
+            /*07_1.png*/
+            animation-fill-mode:forwards;
+        }
+    </style>
+</head>
+<body>
+<div>鼠标放到我身上</div>
+</body>
+</html>

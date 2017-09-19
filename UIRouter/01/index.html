@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="helloworld.js"></script>
+
+    <style>
+        .active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body ng-app="helloworld">
+
+<!--Add ui-sref-active="active" to the ui-sref links. -->
+<!--This directive will add the active css class to the link when the target state is active.-->
+<a ui-sref="hello" ui-sref-active="active">Hello</a>
+<a ui-sref="about" ui-sref-active="active">About</a>
+<ui-view></ui-view>
+
+</body>
+</html>

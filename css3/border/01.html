@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> border-radius</title>
+    <style>
+        /*实心上半圆：*/
+        /*方法：把高度(height)设为宽度（width）的一半，并且只设置左上角和右上角的半径与元素的高度一致（大于也是可以的）。*/
+        div.semi-circle{
+          height:50px;/*是width的一半*/
+          width:100px;
+          background:#9da;
+          border-radius:50px 50px 0 0;/*半径至少设置为height的值*/
+        }
+
+        /*实心圆：*/
+        /*方法：把宽度（width）与高度(height)值设置为一致（也就是正方形），并且四个圆角值都设置为它们值的一半。如下代码：*/
+        div{
+            height:100px;/*与width设置一致*/
+            width:100px;
+            background:#9da;
+            border-radius:50px;/*四个圆角值都设置为宽度或高度值的一半*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="semi-circle">
+</div>
+
+<br/>
+
+<div class="circle">
+</div>
+
+</body>
+</html>

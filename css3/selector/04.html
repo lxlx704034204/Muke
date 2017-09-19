@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menuSection1 {
+            display: none;
+        }
+
+        /*用来匹配文档(页面)的url的某个标志符的目标元素*/
+        #brand1:target { /*这里的:target就是指id="brand"的div对象*/
+            display: block;
+        }
+
+        #brand2:target {
+            background: orange;
+            color: #fff;
+        }
+
+        #jake:target {
+            background: blue;
+            color: #fff;
+        }
+
+        #aron:target {
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<h2><a href="#brand1">Brand1</a></h2>
+<div class="menuSection1" id="brand1">
+    content for Brand
+</div>
+
+<h2><a href="#brand2">Brand2</a></h2>
+<div class="menuSection" id="brand2">
+    content for Brand
+</div>
+<h2><a href="#jake">Brand3</a></h2>
+<div class="menuSection" id="jake">
+    content for jake
+</div>
+<h2><a href="#aron">Brand4</a></h2>
+<div class="menuSection" id="aron">
+    content for aron
+</div>
+
+</body>
+</html>

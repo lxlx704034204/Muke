@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flexcontainer {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+
+            background: #ddd;
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+        }
+
+        /*如何将flex项目移动到顶部，取决于主轴的方向。如果它是垂直的方向通过align-items设置；如果它是水平的方向通过justify-content设置。*/
+        /*column left*/
+        .flexcontainer1 {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+
+            background: #ddd;
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+        }
+        /*row left*/
+        .flexcontainer2 {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+
+            background: #ddd;
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+        }
+        /*row right*/
+        .flexcontainer3 {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+
+            background: #ddd;
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+        }
+
+        /**/
+
+        .box {
+            width: 10px;
+            height: 10px;
+            background: #ff0;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flexcontainer">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="flexcontainer1">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="flexcontainer2">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="flexcontainer3">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>

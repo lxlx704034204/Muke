@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .post p {
+            background: green;
+            color: #fff;
+            padding: 10px;
+        }
+
+        /*选择器选择的是父元素中只有一个子元素，而且只有唯一的一个子元素。也就是说，匹配的元素的父元素中仅有一个子元素，而且是一个唯一的子元素。*/
+        .post p:only-child {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+
+<div class="post">
+    <p>我是一个段落</p>
+    <p>我是一个段落</p>
+</div>
+<div class="post">
+    <p>我是一个段落</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a[class^=icon]{
+            background: green;
+            color:#fff;
+        }
+        a[href$=pdf]{
+            background: orange;
+            color: #fff;
+        }
+        a[title*=more]{
+            background: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<a href="#" class="columnNews">我的背景想变成红色</a>
+<a href="#" class="icon">我的背景想变成绿色</a>
+<a href="#">我的背景想变成绿色</a><br/>
+<a href="#" title="this is a box">我的背景想变成蓝色</a>
+<a href="#" title="more">我的背景想变成蓝色</a>
+<a href="#" title="there is two boxs">我的背景想变成蓝色</a>
+</body>
+</html>

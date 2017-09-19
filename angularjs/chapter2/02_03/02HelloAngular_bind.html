@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<div ng-controller="HelloAngular">
+    <!--index首页用ng-bind绑定数据-->
+    <p><span ng-bind="greeting.text"></span>,Angular</p>
+</div>
+
+<div ng-controller="myCtrl">
+    <p>
+        <span ng-bind="greeting.text">,Angular</span>
+    </p>
+</div>
+
+</body>
+<script src="../../framework/angular-1.3.0.14/angular.js"></script>
+<script src="js/HelloAngular_MVC.js"></script>
+</html>

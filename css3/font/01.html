@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现溢出文本显示省略号的效果</title>
+    <style type="text/css">
+        .test_demo {
+            /*说明文字溢出时用什么方式显示*/
+            /*clip  剪切*/
+            text-overflow: ellipsis;
+            /*溢出内容为隐藏*/
+            overflow: hidden;
+            /*强制文本在一行内显示*/
+            white-space: nowrap;
+            width: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="test_demo">
+    超酷的IT技术学习平台（我是省略号）
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*25. 固定位置的页首*/
+        /*当页面滚动时，有时需要页首在位置固定不变，CSS语句可以这样写，效果参见http://limpid.nl/lab/css/fixed/header：*/
+        body{
+            margin:0;
+            padding:100px 0 0 0;
+        }
+        div#header{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100px;
+        }
+        @media screen{
+            body>div#header{
+                position: fixed;
+            }
+        }
+        * html body{
+            overflow:hidden;
+        }
+        * html div#content{
+            height:100%;
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+
+25. 固定位置的页首
+<div id="header"> header </div>
+<div id="content"> content </div>
+
+</body>
+</html>

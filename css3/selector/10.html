@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 50px auto;
+        }
+
+        form > div {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            border: 1px solid orange;
+            padding: 5px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        /*“:read-only”伪类选择器用来指定处于只读状态元素的样式。简单点理解就是，元素中设置了“readonly=’readonly’”*/
+        input[type="text"]:-moz-read-only {
+            border-color: #ccc;
+        }
+
+        input[type="text"]:read-only {
+            border-color: #ccc;
+        }
+
+        /*“:read-write”选择器刚好与“:read-only”选择器相反，主要用来指定当元素处于非只读状态时的样式。*/
+        .email input[type="text"]:-moz-read-write{
+            border-color: #f36;
+        }
+        .email input[type="text"]:read-write{
+            border-color: #f36;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#">
+    <div>
+        <label for="name">姓名:</label>
+        <input type="text" name="name" id="name" placeholder="大漠"/>
+    </div>
+    <div>
+        <label for="address">地址:</label>
+        <input type="text" name="address" id="address" placeholder="中国上海" readonly="readonly"/>
+    </div>
+    <div class="email">
+        <label for="address">email:</label>
+        <input type="text" name="address" id="email" placeholder="中国上海"/>
+    </div>
+</form>
+
+</body>
+</html>

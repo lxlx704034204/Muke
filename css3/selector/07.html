@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*表示一个元素他有很多个子元素，而其中只有一种类型的子元素是唯一的，使用“:only-of-type”选择器就可以选中这个元素中的唯一一个类型子元素。*/
+        .wrapper > div:only-of-type {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <p>我是一个段落</p>
+    <p>我是一个段落</p>
+    <p>我是一个段落</p>
+    <div>我是一个Div元素</div>
+</div>
+<div class="wrapper">
+    <div>我是一个Div</div>
+    <ul>
+        <li>我是一个列表项</li>
+    </ul>
+    <p>我是一个段落</p>
+</div>
+</body>
+</html>

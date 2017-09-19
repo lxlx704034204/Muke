@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="print.css" media="print"/>
+    <style>
+        /*@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。*/
+        @media screen { {
+            /*你的样式代码写在这里…*/
+        }
+        }
+
+        /*“max-width”是媒体特性中最常用的一个特性，其意思是指媒体类型小于或等于指定的宽度时，样式生效。如：*/
+        @media screen and (max-width: 480px) {
+            .ads {
+                display: none;
+            }
+        }
+
+        /*“min-width”与“max-width”相反，指的是媒体类型大于或等于指定宽度时，样式生效。*/
+        @media screen and (min-width: 900px) {
+            .wrapper {
+                width: 980px;
+            }
+        }
+
+        /*当屏幕在600px~900px之间时，body的背景色渲染为“#f5f5f5”，如下所示。*/
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+            body {
+                background-color: #f5f5f5;
+            }
+        }
+
+        /*使用关键词“not”是用来排除某种制定的媒体类型，也就是用来排除符合表达式的设备。换句话说，not关键词表示对后面的表达式执行取反操作，如：*/
+        /*only用来指定某种特定的媒体类型，可以用来排除不支持媒体查询的浏览器。*/
+        @media not print and (max-width: 1200px) {
+
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>

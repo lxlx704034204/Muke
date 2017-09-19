@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            background: orange;
+            min-height: 30px;
+        }
+        /*比如说，你的文档中有三个段落p元素，你想把没有任何内容的P元素隐藏起来。我们就可以使用“:empty”选择器来控制。*/
+        p:empty {
+            display: none;
+        }​
+    </style>
+</head>
+<body>
+
+<div>我这里有内容</div>
+<div> <!-- 我这里有一个空格 --></div>
+<div></div><!-- 我这里任何内容都没有 -->
+
+</body>
+</html>
