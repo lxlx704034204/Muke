@@ -1,16 +1,16 @@
 var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule', 'BookDetailModule']);
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
- * 这里的run方法只会在angular启动的时候运行一次。
- * 路由里传递参数
+ * 这里的run方法只会在angular启动的时候运行一次。 
+ * 路由里传递参数  
  * @param  {[type]} $rootScope
  * @param  {[type]} $state
  * @param  {[type]} $stateParams
  * @return {[type]}
  */
 routerApp.run(function ($rootScope, $state, $stateParams) {
-    $rootScope.$state = $state;
-    $rootScope.$stateParams = $stateParams;
+    $rootScope.$state = $state;             //$rootScope在an启动的时候就会创建root作用域对象
+    $rootScope.$stateParams = $stateParams; //$rootScope在an启动的时候就会创建root作用域对象
 });
 
 /**
@@ -28,10 +28,10 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('index', {
             url: '/index',
             views: {
-                '': {
+                '': { 
                     templateUrl: 'tpls/home.html'
                 },
-                'main@index': {
+                'main@index': { // 告诉路由$stateProvider你帮我把index里面的main区域用如下templateUrl进行填充
                     templateUrl: 'tpls/loginForm.html'
                 }
             }
@@ -39,9 +39,9 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('booklist', {
             url: '/{bookType:[0-9]{1,4}}',
             views: { //注意这里的写法，当一个页面上带有多个ui-view的时候如何进行命名和视图模板的加载动作
-                '': {
+                '': {//''空表: 默认情况下  加载bookList.html
                     templateUrl: 'tpls/bookList.html'
-                },
+                }, //下面两个是bookList.html中的两个子视图
                 'booktype@booklist': {
                     templateUrl: 'tpls/bookType.html'
                 },
